@@ -67,5 +67,6 @@ PurgecssPlugin.prototype.pattern = /\.css$/;
 // The default value is '*' for usual plugins and
 // 'production' for optimizers.
 // PurgecssPlugin.prototype.defaultEnv = 'production';
+PurgecssPlugin.prototype.defaultEnv = '*';
 
 module.exports = PurgecssPlugin;
