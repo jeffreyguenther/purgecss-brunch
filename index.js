@@ -34,15 +34,18 @@ class PurgecssPlugin {
   // Examples: UglifyJS, CSSMin.
   // optimize(file) { return Promise.resolve({data: minify(file.data)}); }
   optimize(file) {
-    let purger = new Purgecss({
-      content: this.config.paths,
-      extractors: this.config.extractors,
-      css: [file.data],
-      stdin: true
-    });
+    let purger = new Purgecss(
+      Object.assign(this.config, {
+        content: this.config.paths,
+        css: [file.data],
+        stdin: true
+      })
+    );
 
     let purgeResult = purger.purge();
-    return Promise.resolve({data: purgeResult[0].css});
+    return Promise.resolve({
+      data: purgeResult[0].css
+    });
   }
 }
 
