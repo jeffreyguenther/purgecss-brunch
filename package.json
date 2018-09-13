@@ -1,6 +1,6 @@
 {
   "name": "purgecss-brunch",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adds purgecss support to brunch.",
   "author": "Jeffrey Guenther (guenther.jeffrey@gmail.com)",
   "homepage": "https://github.com/jeffreyguenther/purgecss-brunch.git",
